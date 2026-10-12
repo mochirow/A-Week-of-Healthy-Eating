@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1週間の食事設計</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f7f2;--card:#fff;--ink:#1f2a24;--sub:#5d6b62;--line:#dde3da;--main:#2f6b4f;--soft:#e4efe8;
+--morning:#d99a1c;--noon:#3a7ca5;--night:#4b4f9e;--snack:#b5654a;--warn:#fbeee6;--warnink:#8a3b1c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--card:#1c241f;--ink:#e8eee9;--sub:#9fb0a5;--line:#2c3830;--main:#6fc39a;--soft:#223229;--morning:#e9b44c;--noon:#6fb2d8;--night:#9a9ee6;--snack:#e0937a;--warn:#33241d;--warnink:#f0b79f}}
+:root[data-theme="dark"]{--bg:#141a16;--card:#1c241f;--ink:#e8eee9;--sub:#9fb0a5;--line:#2c3830;--main:#6fc39a;--soft:#223229;--morning:#e9b44c;--noon:#6fb2d8;--night:#9a9ee6;--snack:#e0937a;--warn:#33241d;--warnink:#f0b79f}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:720px;margin:0 auto;padding:32px 18px 56px}
+h1{font-size:clamp(28px,7vw,40px);line-height:1.3;font-weight:900;margin:0 0 8px;letter-spacing:.02em}
+.lead{color:var(--sub);margin:0 0 32px}
+h2{font-size:22px;font-weight:900;margin:48px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--main)}
+h3{font-size:18px;margin:0 0 4px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 12px}
+.card p{margin:4px 0 0;color:var(--sub);font-size:15px}
+.card b{color:var(--main)}
+.meal{--c:var(--morning);background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:10px;padding:16px 18px;margin:0 0 16px}
+.meal.noon{--c:var(--noon)}.meal.night{--c:var(--night)}.meal.snack{--c:var(--snack)}
+.meal h3{color:var(--c)}
+.meal .note{margin:0 0 8px;font-size:14px;color:var(--sub)}
+.meal ul{margin:0;padding-left:1.2em}
+.meal li{margin:2px 0}
+.meal li b{font-weight:700}
+.tip{margin:12px 0 0;padding:10px 12px;background:var(--soft);border-radius:8px;font-size:15px}
+.sub{margin:8px 0 0;padding:10px 12px 10px 14px;border-left:3px solid var(--line)}
+.sub p{margin:0 0 2px;font-weight:700;font-size:14px}
+.sub ul{margin:0;padding-left:1.2em;font-size:15px}
+dl.shop{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+dl.shop dt{padding:12px 14px;background:var(--soft);font-weight:700;border-bottom:1px solid var(--line)}
+dl.shop dd{margin:0;padding:12px 14px;border-bottom:1px solid var(--line)}
+dl.shop dt:last-of-type,dl.shop dd:last-of-type{border-bottom:0}
+.warn{background:var(--warn);border-radius:10px;padding:14px 18px;margin:0 0 12px}
+.warn h3{color:var(--warnink)}
+.warn p{margin:4px 0 0;font-size:15px}
+.closing{margin-top:36px;padding:16px 18px;border-radius:10px;background:var(--soft)}
+@media (max-width:480px){dl.shop{grid-template-columns:1fr}dl.shop dt{border-bottom:0;padding-bottom:4px}dl.shop dd{padding-top:4px}}
+</style>
+</head>
+<body>
+<main>
+<h1>1週間の食事設計</h1>
+<p class="lead">平日に「何食べよう……」と悩むのが一番のムダ。ベースを決めて、微調整するだけにする。</p>
+
+<h2>基本ルール</h2>
+<div class="card"><h3>主食（糖質）は抜かずに質を変える</h3>
+<p>白米・菓子パン・うどん単体はやめて、<b>オートミール、もち麦ご飯、玄米、蒸したさつまいも</b>にする。血糖値の急な乱高下が抑えられ、食後の猛烈な眠気と変な空腹感が消える。</p></div>
+<div class="card"><h3>タンパク質は毎食20〜30gを固定</h3>
+<p>皮なし鶏むね肉、ささみ、サバや鮭などの青魚、卵、納豆、豆腐をローテーション。脂身の多いバラ肉や揚げ物は、内臓を休めるためにもこの1週間だけ完全に切る。</p></div>
+<div class="card"><h3>食物繊維は「水溶性」を意識する</h3>
+<p>野菜を適当に食べるだけだと不溶性ばかりで便秘になりやすい。<b>わかめ・もずく・めかぶ</b>などの海藻類、<b>きのこ類</b>（舞茸・しめじ・えのき）、<b>オクラ</b>を毎食ねじ込む。</p></div>
+<div class="card"><h3>発酵食品と香味野菜で代謝と腸内環境を底上げ</h3>
+<p>納豆、キムチ、味噌汁に加えて、生姜をたっぷり使う。体が温まり、消化吸収を助けてくれるので余計な胃もたれが起きない。</p></div>
+
+<h2>1週間のベースメニュー</h2>
+
+<section class="meal">
+<h3>朝食</h3>
+<p class="note">体内時計のリセットと代謝上げ</p>
+<ul>
+<li>オートミール30〜40g（お茶漬けの素や出汁でふやかす）または もち麦ご飯軽め1膳</li>
+<li>卵 1個（目玉焼きかゆで卵）</li>
+<li>納豆 1パック（刻み生姜やネギを混ぜる）</li>
+<li>乾燥わかめと豆腐の味噌汁</li>
+</ul>
+<p class="tip">朝にタンパク質と複合糖質を入れておくと、日中の集中力が全然違う。だるくてもこれだけは胃に流し込む。</p>
+</section>
+
+<section class="meal noon">
+<h3>昼食</h3>
+<p class="note">コンビニや弁当でもブレない構成</p>
+<ul>
+<li><b>主食：</b>玄米・雑穀おにぎり、または鮭おにぎり 1個</li>
+<li><b>主菜：</b>サラダチキン、ほっけの塩焼き、サバの塩焼き、焼き鳥（タレじゃなく塩）</li>
+<li><b>副菜：</b>もずく酢、海藻サラダ（ドレッシングはノンオイル青じそ等）、ひじき煮</li>
+<li><b>汁物：</b>インスタントのあさりやしじみの味噌汁</li>
+</ul>
+<p class="tip">炭水化物をドカ食いしないのが午後死なないための鉄則。脂っこいラーメンや定食の揚げ物は論外。</p>
+</section>
+
+<section class="meal night">
+<h3>夕食</h3>
+<p class="note">消化の良さとリカバリー重視</p>
+<ul>
+<li><b>主食：</b>夜はエネルギーを消費しないから、もち麦ご飯半分（80〜100g程度）か、ふかしたさつまいも少量</li>
+<li><b>副菜・汁物：</b>きのこ（舞茸・えのき）とキャベツを大量に入れた生姜スープ</li>
+</ul>
+<div class="sub"><p>主菜（どれか1つ）</p>
+<ul>
+<li><b>パターンA：</b>鶏むね肉とキノコのホイル焼き（ポン酢や生姜醤油で）</li>
+<li><b>パターンB：</b>サバの水煮缶を使ったトマト野菜煮込み、または鶏胸ひき肉を使った生姜多めのスパイスキーマ（油は極小）</li>
+<li><b>パターンC：</b>タラや鮭の切り身を入れた具だくさん鍋</li>
+</ul></div>
+<p class="tip">夜に脂質を摂りすぎると睡眠の質が落ちて翌朝だるくなる。夜はとことん脂を抜いて、水分と野菜とタンパク質で胃を満たす。</p>
+</section>
+
+<section class="meal snack">
+<h3>間食</h3>
+<p class="note">どうしても腹が減って発狂しそうな時</p>
+<ul>
+<li>無塩素焼きミックスナッツ（手のひらに軽く乗る程度）</li>
+<li>ゆで卵</li>
+<li>無糖ギリシャヨーグルト（オイコス等）</li>
+<li>あたりめ（よく噛むと空腹感が紛れる）</li>
+</ul>
+</section>
+
+<h2>買い出しリスト</h2>
+<p class="lead" style="margin-bottom:16px">スーパーで迷わないように、これをカゴに入れておけば1週間回る。</p>
+<dl class="shop">
+<dt>主食・乾物</dt><dd>オートミール（またはもち麦）、乾燥わかめ、さつまいも</dd>
+<dt>タンパク質</dt><dd>鶏むね肉（皮は剥ぐ）、卵（2パック）、納豆（3パック×2）、木綿豆腐、サバ水煮缶、生鮭またはタラ</dd>
+<dt>野菜・きのこ</dt><dd>ブロッコリー、舞茸、しめじ、キャベツ、生姜（多め）、オクラ</dd>
+<dt>調味料・汁物</dt><dd>味噌、醤油、ポン酢、塩、黒胡椒、チューブではなく生の生姜、ノンオイルドレッシング</dd>
+</dl>
+
+<h2>乗り切るための注意点</h2>
+<div class="warn"><h3>水分は常温の水か無糖の茶を1.5〜2L</h3>
+<p>ジュースや甘いカフェオレは排除。ゼロキロカロリー飲料も、人工甘味料で味覚と腸内環境を狂わせたくないので、この1週間はできれば水かブラックコーヒー、無糖の炭酸水にとどめる。</p></div>
+<div class="warn"><h3>ドレッシングと油のトラップを避ける</h3>
+<p>健康ぶって生野菜サラダを食べても、市販のシーザーやゴマドレをドバドバかけたら脂質と果糖ぶどう糖液糖の塊になって意味がない。塩とレモン、ポン酢、または少量のオリーブオイルで食べる。</p></div>
+<div class="warn"><h3>酒は完全に切る</h3>
+<p>アルコールが入ると肝臓が解毒に専念して脂質代謝が止まるし、睡眠の質も落ちて健康生活が破綻する。1週間だけと割り切って炭酸水でごまかす。</p></div>
+
+<p class="closing">最初は味の濃いジャンクフードが恋しくなってイライラするかもしれないけど、3日目あたりから胃の重さや朝起きた時の気だるさが露骨に軽くなってくるはず。</p>
+</main>
+</body>
+</html>
